@@ -1,85 +1,72 @@
+<?php $title = 'VIDEO'; ?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>BTS - Video</title>
+		<title>BTS - VIDEO</title>
 		<?php require_once 'include/_assets.php' ?>
 	</head>
 	<body>
-		<img src="img/bg.jpg" id="bg" class="unselectable" alt="">
+		<div class="upper_red"></div>
 		<div class="container">
 			<div class="row" id="modules">
 				<?php require_once 'include/_header.php' ?>
-				<div class="module span8" id="sub_header">
-					<h2 class="album">Video</h2>
-					<div class="vid_item">
-						<iframe width="620" height="348" src="//www.youtube.com/embed/rBG5L7UsUxA" frameborder="0" allowfullscreen></iframe>
-						<p class="desc">No More Dream MV</p>
-					</div>
-					<div class="vid_item">
-						<iframe width="620" height="348" src="//www.youtube.com/embed/f7rUjOadhwo" frameborder="0" allowfullscreen></iframe>
-						<p class="desc">Movie Trailer 2</p>
-					</div>
-					<div class="vid_item">
-						<iframe width="620" height="348" src="//www.youtube.com/embed/ZjEnJif3mGM" frameborder="0" allowfullscreen></iframe>
-						<p class="desc">Movie Trailer 1</p>
-					</div>
-					<div class="vid_item">
-						<iframe width="620" height="348" src="//www.youtube.com/embed/Ya65AfxLesU" frameborder="0" allowfullscreen></iframe>
-						<p class="desc">Debut Trailer</p>
+				<div class="module span12" id="sub_header">
+					<div class="movie_wrap">
+						<iframe width="928" height="522" src="//www.youtube.com/embed/GYDncRcwdlE" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
+				<div class="span3 member_module vid" data-src="http://www.youtube.com/embed/fglrRHHSO7A">
+					<div class="img_wrap">
+						<img src="http://img.youtube.com/vi/fglrRHHSO7A/0.jpg">
+					</div>
+					<div class="desc_wrap">
+						<h3>COMEBACK<br/>TRAILER</h3>
+					</div>
+				</div><!-- member_module_end -->
+				<div class="span3 member_module vid" data-src="http://www.youtube.com/embed/DHAk3T_gqBQ">
+					<div class="img_wrap">
+						<img src="http://img.youtube.com/vi/DHAk3T_gqBQ/0.jpg">
+					</div>
+					<div class="desc_wrap">
+						<h3>CONCEPT<br/>TRAILER</h3>
+					</div>
+				</div><!-- member_module_end -->
+				<div class="span3 member_module vid" data-src="http://www.youtube.com/embed/R3017eEgykw">
+					<div class="img_wrap">
+						<img src="http://img.youtube.com/vi/R3017eEgykw/0.jpg">
+					</div>
+					<div class="desc_wrap">
+						<h3>MV<br/>TEASER #1</h3>
+					</div>
+				</div><!-- member_module_end -->
+				<div class="span3 member_module vid" data-src="http://www.youtube.com/embed/GYDncRcwdlE">
+					<div class="img_wrap">
+						<img src="http://img.youtube.com/vi/GYDncRcwdlE/0.jpg">
+					</div>
+					<div class="desc_wrap">
+						<h3>MV<br/>TEASER #2</h3>
+					</div>
+				</div><!-- member_module_end -->
+				<div class="span3 member_module vid" data-src="http://www.youtube.com/embed/BfVt5jRGWCo">
+					<div class="img_wrap">
+						<img src="http://img.youtube.com/vi/BfVt5jRGWCo/0.jpg">
+					</div>
+					<div class="desc_wrap">
+						<h3>ALBUM<br/>PREVIEW</h3>
+					</div>
+				</div><!-- member_module_end -->
 				<?php require_once 'include/_footer.php' ?>
 			</div>
 		</div>
+		<script type="text/javascript">
+		$('.vid').click(function(ev) {
+
+			var src = $(this).data('src');
+
+			$('iframe').attr('src', src);
+			return ev.preventDefault();
+		});
+		</script>
 	</body>
-	<script type="text/javascript">
-
-		//background resize
-
-		var $window = $(window);
-		var $bg = $('#bg');
-
-		resize();
-
-		$window.resize(function() {
-			resize();
-		});
-
-		function resize() {
-			// 섹션 높이 계산
-			
-			var _width = $window.width();
-			var _height = $window.height();
-
-			// 각 섹션의 백그라운드 그림의 사이즈도 바꿔줘야돼.
-
-			var horizonality = 1.293103448;
-
-			var section_horizonality = _width / _height;
-
-			if(section_horizonality >= horizonality) {	
-				$bg.width(_width);
-				$bg.height(_width / horizonality);
-			} else {
-				$bg.height(_height);
-				$bg.width(_height * horizonality);
-
-				var offset = (( _height * horizonality ) - _width )/ 2;
-				$bg.css({
-					left: -offset
-				});
-			}
-		}
-
-		// masonry
-
-		var $container = $('#modules');
-
-		$window.load( function() {
-			$container.masonry({
-			  itemSelector: '.module'
-			});
-		});
-	</script>
 </html>

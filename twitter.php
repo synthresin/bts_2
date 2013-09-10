@@ -2,6 +2,8 @@
 date_default_timezone_set('Asia/Seoul');
 require_once('twitteroauth/twitteroauth.php'); 
 
+$title = 'TWITTER';
+
 function getConnectionWithAccessToken($oauth_token, $oauth_token_secret) {
   $connection = new TwitterOAuth('9i6FUMEeDycYMUAsVXRy1g', 'oADsZVmh0poL4SpTFDiE8ofrQKXOJs6XmdaLhsB94', $oauth_token, $oauth_token_secret);
   return $connection;
@@ -76,83 +78,60 @@ $content = $connection->get("statuses/user_timeline", array(
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>BTS - Twitter</title>
+		<title>BTS - TWITTER</title>
 		<?php require_once 'include/_assets.php' ?>
 	</head>
 	<body>
-		<img src="img/bg.jpg" id="bg" class="unselectable" alt="">
+		<div class="upper_red"></div>
 		<div class="container">
-			<div class="row" id="modules">
+			<div class="row">
 				<?php require_once 'include/_header.php' ?>
-				<div class="module span8" id="sub_header">
-					<h2 class="album">Twitter</h2>
-				</div>
-				<?php 
-					if($content) {
-						foreach ($content as $tweet) :
-				?>
-				<div class="module span4 twt_item">
-					<div class="img_wrap">
-						<img src="<?php getImgSrc($tweet); ?>"/>
+				<div class="span12">
+					<div class="row" id="modules">
+						<?php 
+							if($content) {
+								foreach ($content as $tweet) :
+						?>
+						
+						<div class="module span4 twt_item">
+							
+							<div class="img_wrap">
+								<img src="<?php getImgSrc($tweet); ?>"/>
+							</div>
+							
+							
+							<div class="text_wrap display_font">
+								<a href="<?php getURLString($tweet); ?>" target="_blank"><?php echo $tweet->text; ?></a>
+								<br/><br/>
+								<span class="date"><?php echo elapsedtime(from_apachedate($tweet->created_at)); ?></span>
+							</div>
+						</div>
+						<?php
+							endforeach;
+							}
+						?>
 					</div>
-					<div class="text_wrap display_font">
-						<a href="<?php getURLString($tweet); ?>" target="_blank"><?php echo $tweet->text; ?></a>
-						<br/><br/>
-						<span class="date"><?php echo elapsedtime(from_apachedate($tweet->created_at)); ?></span>
-					</div>
 				</div>
-				<?php
-					endforeach;
-					}
-				?>
 				<?php require_once 'include/_footer.php' ?>
 			</div>
 		</div>
 	</body>
 	<script type="text/javascript">
 
-		//background resize
-
-		var $window = $(window);
-		var $bg = $('#bg');
-
-		resize();
-
-		$window.resize(function() {
-			resize();
-		});
-
-		function resize() {
-			// 섹션 높이 계산
-			
-			var _width = $window.width();
-			var _height = $window.height();
-
-			// 각 섹션의 백그라운드 그림의 사이즈도 바꿔줘야돼.
-
-			var horizonality = 1.293103448;
-
-			var section_horizonality = _width / _height;
-
-			if(section_horizonality >= horizonality) {	
-				$bg.width(_width);
-				$bg.height(_width / horizonality);
-			} else {
-				$bg.height(_height);
-				$bg.width(_height * horizonality);
-
-				var offset = (( _height * horizonality ) - _width )/ 2;
-				$bg.css({
-					left: -offset
-				});
-			}
-		}
-
-		// masonry
 
 		var $container = $('#modules');
 
-		$window.load( function() {
+		$(window).load( function() {
+
+			$('.twt_item').each(function(idx, elem) {
+
+				var img = $(elem).find('img');
+
+				if (!img.attr('src')) {
+					$(elem).find('.img_wrap').remove();
+				}
+
+			});
 			$container.masonry({
 			  itemSelector: '.module'
 			});

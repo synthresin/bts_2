@@ -1,17 +1,24 @@
-<div class="module span4" id="header">
-	<a href="index.php" class="logo">INDEX</a>
-	<ul class="nav">
-		<li><a href="bts.php">BTS</a></li>
-		<li><a href="album.php">Album</a></li>
-		<li><a href="photo.php">Photo</a></li>
-		<li><a href="video.php">Video</a></li>
-		<li><a href="twitter.php">Twitter</a></li>
-	</ul>
-	<ul class="subnav">
-		<li><a href="http://btsblog.ibighit.com" target="_blank" class="blog">blog</a></li>
-		<li><a href="http://cafe.daum.net/BANGTAN" target="_blank" class="cafe">cafe</a></li>
-		<li><a href="http://www.youtube.com/BANGTANTV" target="_blank" class="youtube">youtube</a></li>
-		<li><a href="https://www.facebook.com/bangtan.official" target="_blank" class="facebook">facebook</a></li>
-		<li><a href="http://ibighit.com/schedule/schedule_bts.asp" target="_blank" class="schedule">schedule</a></li>
-	</ul>
+<div class="module span12" id="header">
+	<div class="row">
+		<div class="span3">
+			<h1><?php echo $title; ?></h1>
+		</div>
+		<div class="span9">
+			<ul class="nav">
+				<li><a href="bts.php">BTS</a></li>
+				<li><a href="album.php">ALBUM</a></li>
+				<li><a href="photo.php">PHOTO</a></li>
+				<li><a href="video.php">VIDEO</a></li>
+				<li><a href="twitter.php">TWITTER</a></li>
+				<li class="sub"><a href="http://btsblog.ibighit.com" target="_blank" class="blog">BLOG</a></li>
+				<li class="sub"><a href="http://cafe.daum.net/BANGTAN" target="_blank" class="cafe">CAFE</a></li>
+				<li class="sub"><a href="http://www.youtube.com/BANGTANTV" target="_blank" class="youtube">YOUTUBE</a></li>
+				<li class="sub"><a href="https://www.facebook.com/bangtan.official" target="_blank" class="facebook">FACEBOOK</a></li>
+				<li class="sub"><a href="http://ibighit.com/schedule/schedule_bts.asp" target="_blank" class="schedule">SCHEDULE</a></li>
+			</ul>
+		</div>	
+		<div class="span12">
+			<img class="header_logo" src="img/header-logo.png">
+		</div>
+	</div>
 </div>
