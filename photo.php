@@ -31,7 +31,7 @@
 						<h3 class="gallery">MEMBER<br/>GALLERY</h3>
 					</div>
 				</div>
-					<div class="module span3 member_module">
+					<div class="module span3 member_module photo_module jimin">
 						<div class="img_wrap">
 							<img src="img/members_jimin.jpg">
 						</div>
@@ -39,7 +39,7 @@
 							<h3>JIMIN</h3>
 						</div>
 					</div><!-- member_module_end -->
-					<div class="module span3 member_module">
+					<div class="module span3 member_module photo_module jhope">
 						<div class="img_wrap">
 							<img src="img/members_jhope.jpg">
 						</div>
@@ -47,7 +47,7 @@
 							<h3>J-HOPE</h3>
 						</div>
 					</div><!-- member_module_end -->
-					<div class="module span3 member_module">
+					<div class="module span3 member_module photo_module suga">
 						<div class="img_wrap">
 							<img src="img/members_suga.jpg">
 						</div>
@@ -55,7 +55,7 @@
 							<h3>SUGA</h3>
 						</div>
 					</div><!-- member_module_end -->
-					<div class="module span3 member_module">
+					<div class="module span3 member_module photo_module rapmonster">
 						<div class="img_wrap">
 							<img src="img/members_rapmonster.jpg">
 						</div>
@@ -63,7 +63,7 @@
 							<h3>RAP MONSTER</h3>
 						</div>
 					</div><!-- member_module_end -->
-					<div class="module span3 member_module">
+					<div class="module span3 member_module v">
 						<div class="img_wrap">
 							<img src="img/members_v.jpg">
 						</div>
@@ -72,7 +72,7 @@
 						</div>
 					</div><!-- member_module_end -->
 					
-					<div class="module span3 member_module">
+					<div class="module span3 member_module photo_module jungkook">
 						<div class="img_wrap">
 							<img src="img/members_jungkook.jpg">
 						</div>
@@ -80,7 +80,7 @@
 							<h3>JUNG KOOK</h3>
 						</div>
 					</div><!-- member_module_end -->
-					<div class="module span3 member_module">
+					<div class="module span3 member_module photo_module jin">
 						<div class="img_wrap">
 							<img src="img/members_jin.jpg">
 						</div>
@@ -129,8 +129,6 @@
 			  <div class='swipe-wrap'>
 			    <div><img src="gallery/v1.jpg" height="520"></div>
 			    <div><img src="gallery/v2.jpg" height="520"></div>
-			    <div><img src="gallery/v3.jpg" height="520"></div>
-			    <div><img src="gallery/v4.jpg" height="520"></div>
 			  </div>
 			</div>
 			<div class="control">
@@ -158,7 +156,6 @@
 			  <div class='swipe-wrap'>
 			    <div><img src="gallery/jin1.jpg" height="520"></div>
 			    <div><img src="gallery/jin2.jpg" height="520"></div>
-			    <div><img src="gallery/jin3.jpg" height="520"></div>
 			  </div>
 			</div>
 			<div class="control">
@@ -172,7 +169,6 @@
 			  <div class='swipe-wrap'>
 			    <div><img src="gallery/jimin1.jpg" height="520"></div>
 			    <div><img src="gallery/jimin2.jpg" height="520"></div>
-			    <div><img src="gallery/jimin3.jpg" height="520"></div>
 			  </div>
 			</div>
 			<div class="control">
@@ -195,5 +191,30 @@
 				<a href="#" class="close"></a>
 			</div>
 		</div><!-- popup end -->
+		<script type="text/javascript">
+			var slider_jungkook,
+				slider_rapmonster,
+				slider_v,
+				slider_suga,
+				slider_jin,
+				slider_jimin,
+				slider_jhope;
+
+				slider_jungkook = new Slider( {view: $('.jungkook_slider'), btn: $('.jungkook')} );
+				slider_rapmonster = new Slider( {view: $('.rapmonster_slider'), btn: $('.rapmonster')} );
+				slider_v = new Slider( {view: $('.v_slider'), btn: $('.v')} );
+				slider_suga = new Slider( {view: $('.suga_slider'), btn: $('.suga')} );
+				slider_jin = new Slider( {view: $('.jin_slider'), btn: $('.jin')} );
+				slider_jimin = new Slider( {view: $('.jimin_slider'), btn: $('.jimin')} );
+				slider_jhope = new Slider( {view: $('.jhope_slider'), btn: $('.jhope')} );
+
+				slider_jungkook.init();
+				slider_rapmonster.init();
+				slider_v.init();
+				slider_suga.init();
+				slider_jin.init();
+				slider_jimin.init();
+				slider_jhope.init();
+		</script>
 	</body>
 </html>

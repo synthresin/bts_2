@@ -154,12 +154,15 @@ h3 {margin:0; padding:0; color:#bf1515; font-family: 'AkzidenzSuper', 'Arial', '
 .twt_item .date{ color:#bf1515;}
 
 .popup_bg {position:fixed; left:0; top:0; bottom:0; right:0; background:url("../img/bg_popup.png"); display: none;}
-.popup {width:780px; height:586px; position: fixed; top:50%; left:50%; margin-left:-390px; margin-top:-293px; display: none;}
-.popup .swipe {background: #121212;}
-.popup .control { background:#151515; height:66px; position: absolute; bottom:0; left:0; right:0;}
+.popup {width:780px; height:586px; position: fixed; top:50%; left:50%; margin-left:-390px; margin-top:-293px; display: none; border:1px solid #dbdbdb;}
+.popup .swipe {background: #fdfdfd;}
+.popup .control { background:white; height:66px; position: absolute; bottom:0; left:0; right:0;}
 
 .popup .control .left {width:18px; height:21px; background: url("../img/left.png") no-repeat; position:absolute; left:15px; top:21px;}
 .popup .control .right {width:18px; height:21px; background: url("../img/right.png") no-repeat; position:absolute; left:43px; top:21px;}
 .popup .control .close {width:21px; height:21px; background: url("../img/close.png") no-repeat; position:absolute; right:15px; top:21px;}
 
 .popup img {height:520px; display: block; margin:0 auto;}
+
+
+.photo_module {cursor: pointer;}
