@@ -112,6 +112,10 @@ a { color:#666; text-decoration: none;}
   position: relative; top:10px; font-weight: normal
 }
 
+#header h1 a {
+  color:#bf1515;
+}
+
 #sub_header {
   padding-bottom:85px; border-bottom:1px solid #dbdbdb; margin-bottom:66px;
 }

@@ -41,7 +41,7 @@
 					<div class="desc_wrap">
 						<h3>JIMIN</h3>
 						<p class="display_font">
-							본명 : 김지민<br/>
+							본명 : 박지민<br/>
 							생년월일 : 1995/10/13<br/>
 							키 : 175cm<br/>
 							몸무게 : 60kg

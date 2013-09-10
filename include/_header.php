@@ -1,7 +1,7 @@
 <div class="module span12" id="header">
 	<div class="row">
 		<div class="span3">
-			<h1><?php echo $title; ?></h1>
+			<h1><a href="/"><?php echo $title; ?></a></h1>
 		</div>
 		<div class="span9">
 			<ul class="nav">
