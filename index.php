@@ -13,7 +13,7 @@
 				<li><a href="album.php">Album</a></li>
 				<li><a href="photo.php">Photo</a></li>
 				<li><a href="video.php">Video</a></li>
-				<li><a href="twitter.php">Twitter</a></li>
+				<li><a href="twitter.php">TwitterQ</a></li>
 			</ul>
 			<ul class="subnav">
 				<li><a href="http://btsblog.ibighit.com" target="_blank" class="blog">blog</a></li>
