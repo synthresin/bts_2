@@ -21,7 +21,7 @@
 						<img src="http://img.youtube.com/vi/r5GaAEHvHj0/0.jpg">
 					</div>
 					<div class="desc_wrap">
-						<h3>COMEBACK<br/>TRAILER</h3>
+						<h3>N.O<br/>MUSIC VIDEO</h3>
 					</div>
 				</div><!-- member_module_end -->
 				<div class="span3 member_module vid" data-src="http://www.youtube.com/embed/fglrRHHSO7A">
