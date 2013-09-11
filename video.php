@@ -13,9 +13,17 @@
 				<?php require_once 'include/_header.php' ?>
 				<div class="module span12" id="sub_header">
 					<div class="movie_wrap">
-						<iframe width="928" height="522" src="//www.youtube.com/embed/GYDncRcwdlE" frameborder="0" allowfullscreen></iframe>
+						<iframe width="928" height="522" src="//www.youtube.com/embed/r5GaAEHvHj0" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
+				<div class="span3 member_module vid" data-src="http://www.youtube.com/embed/r5GaAEHvHj0">
+					<div class="img_wrap">
+						<img src="http://img.youtube.com/vi/r5GaAEHvHj0/0.jpg">
+					</div>
+					<div class="desc_wrap">
+						<h3>COMEBACK<br/>TRAILER</h3>
+					</div>
+				</div><!-- member_module_end -->
 				<div class="span3 member_module vid" data-src="http://www.youtube.com/embed/fglrRHHSO7A">
 					<div class="img_wrap">
 						<img src="http://img.youtube.com/vi/fglrRHHSO7A/0.jpg">
