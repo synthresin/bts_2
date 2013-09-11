@@ -5,7 +5,7 @@
 				Copyright © Big Hit Entertainment All Right Reserved.		
 			</div>
 			<div class="span6 pull-right">
-				<a href="2kool4skool">2 KOOL 4 SKOOL PAGE</a>
+				<a href="2cool4skool">2 COOL 4 SKOOL PAGE</a>
 			</div>	
 		</div>
 		
